@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title
+            block title
+        style.
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            main {
+                flex: 1 0 auto;
+            }
+
+            section {
+                padding-top: 45px;
+            }
+      
+    body.grey.lighten-4
+        include navbar.pug
+
+        main
+            block content
+        
+        include footer.pug
+
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto+Mono")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/materialize-css@0.100.1/dist/css/materialize.min.css")
+        script(src="https://cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/materialize-css@0.100.1")
+        
+        block footer

@@ -1,0 +1,96 @@
+extends partials/app.pug
+
+block title
+    | Hackerium | Learn Computer, The Right Way
+
+block content
+    .card(style="margin: 0").teal.z-depth-4
+        .container
+            .card-content(style="padding-left: 0")
+                br
+                br
+                h3.white-text(style="font-weight: 300") Learn Coding, The Right Way
+                h5.white-text(style="font-weight: 200") Learn by doing. Not by reading. Humans are made to understand, not to memorize.
+                br
+                a.waves-effect.waves-dark.white.teal-text.btn Learn More
+                br
+                br
+                br
+
+    section
+        .container
+            .row.center-align
+                .col.s12.m4.l4
+                    .card
+                        .card-content.hoverable
+                            span.card-title Merit-based Admission
+                            p We select students based on their skill, not how much they can pay.
+                .col.s12.m4.l4
+                    .card
+                        .card-content.hoverable
+                            span.card-title Pay tution fees later
+                            p Pay the tution fees once you are satisfied. Only pay for the course materials
+                .col.s12.m4.l4
+                    .card
+                        .card-content.hoverable
+                            span.card-title Swags worth more your pay
+                            p Get <b>free .me</b> domain for a year, a server and every other tools you might need for free
+            .row.center-align
+                .col.s12.m6.l6
+                    .card
+                        .card-content.hoverable
+                            span.card-title Only on weekends
+                            p Do when you are free and peace. Learning should be enjoyable, not like the boring classes
+                .col.s12.m6.l6
+                    .card
+                        .card-content.hoverable
+                            span.card-title Each course, less than two days
+                            p A typical person doesn't have time. All our courses are designed to be finished in a day or two. Not more!
+
+    div(style="padding-top: 10px")
+        .container
+            .center-align
+                h3(style="font-family: 'Roboto Mono'") Preparing the next <br> <span class="teal-text">Generation of creators</span>
+            div(style="padding-top: 20px")
+                .row
+                    .col.s12.m6.l6
+                        ul.collapsible(data-collapsible="accordion")
+                            li.active
+                                .collapsible-header What's this, what I'd be doing?
+                                .collapsible-body You'll be learning to make portfolios, websites and cross-platfrom apps in Javascript.
+                            li
+                                .collapsible-header What language would we be using
+                                .collapsible-body Most of the course will be using PHP and/or Javascript. We'll teach other languages like Python, Ruby when we gain momentum of this project.
+                            li
+                                .collapsible-header Do we get anything for free?
+                                .collapsible-body Programming isn't something that can be taught in just a day or two. It is upto the student to practice. So we giveaway a <b><i>full-year .me domain, a server and other tools required for developing</i></b> for free.
+                    .col.s12.m6.l6.hide-on-small-only
+                        .card
+                            .card-content
+                                .card-title Contact us
+                                form(action="/contact", method="post")
+                                    .input-field
+                                        input(name="name" type="text" required="true")#name.validate
+                                        label(for="name") Name
+                                    .input-field
+                                        input(name="email" type="email" required="true")#email.validate
+                                        label(for="email") Email
+                                    .input-field
+                                        textarea(name="message", cols="30", rows="10" required="true")#message.materialize-textarea
+                                        label(for="message") Message
+                                    .input-field
+                                        input(type="submit", value="Submit").waves-effect.waves-dark.btn
+                div(style="padding-top: 20px")
+                    h4(style="font-family: 'Roboto Mono'") <b> Hackerium Programs (Hackerias)
+                    div(style="padding-top: 20px")
+                        .card
+                            .card-content
+                                span.card-title(style="font-family: 'Roboto Mono'") Build Portfolio For Yourself
+                                .chip <i class="material-icons close">access_time</i> 1 DAY
+
+block footer
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    script.
+        $(document).ready(function(){
+            $('.collapsible').collapsible();
+        });

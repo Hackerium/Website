@@ -1,3 +1,4 @@
+{join} = require 'path'
 express = require 'express'
 bodyParser = require 'body-parser'
 expressCookies = require 'express-cookies'
@@ -8,7 +9,7 @@ expressSession = require 'express-session'
 app = express()
 
 session =
-  secret: 'keyboard cat'
+  secret: 'VAz@d859b2Rd774BK29t2b^z7QKy75U&'
   resave: false
   saveUninitialized: true
   cookie: {}
@@ -16,6 +17,9 @@ session =
 if app.get 'env' == 'production'
   app.set 'trust proxy', 1
   sess.cookie.secure = true
+
+app.set 'views', join __dirname, '../..', 'src/resources/views'
+app.set 'view engine', 'pug'
 
 app.use expressCookies()
 app.use expressSession session

@@ -1,0 +1,15 @@
+header
+    nav.white
+        .nav-wrapper.container
+            a(href="{{ url('/') }}").brand-logo.black-text Hackerium
+            ul.right.hide-on-med-and-down
+                //- TODO: Guest only view
+                li
+                    a(href="/login").black-text Login
+                li
+                    a(href="/register").waves-effect.waves-dark.lime.accent-2.black-text.btn Register
+                //- TODO: Authenticated user only view
+                //- li
+                //-     a(href="/logout").black-text Logout
+                //- li
+                //-     a(href="/profile").waves-effect.waves-dark.lime.accent-2.black-text.btn.z-depth-4 [USERNAME HERE]
