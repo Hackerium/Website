@@ -1,0 +1,23 @@
+extends partials/app
+
+block title
+    | Hackerium | Register | Learn Coding, The Right Way
+
+block content
+    section
+        .container
+            .card
+                .card-content
+                    .card-title Register Now
+                    form(action="/auth/register", method="post")
+                        .input-field
+                            input(type="text", name="name")#name.validate
+                            label(for="name") Name
+                        .input-field
+                            input#email.validate(type="email", name="emaik")
+                            label(for="email") Email
+                        .input-field
+                            input#password.validate(type="password", name="password")
+                            label(for="password") Password
+                        .input-field
+                            input(type="submit", value="Register").waves-effect.waves-effect.btn

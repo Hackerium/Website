@@ -1,4 +1,5 @@
 {join} = require 'path'
+helmet = require 'helmet'
 express = require 'express'
 bodyParser = require 'body-parser'
 expressCookies = require 'express-cookies'
@@ -21,6 +22,7 @@ if app.get 'env' == 'production'
 app.set 'views', join __dirname, '../..', 'src/resources/views'
 app.set 'view engine', 'pug'
 
+app.use helmet()
 app.use expressCookies()
 app.use expressSession session
 app.use router
